@@ -16,9 +16,9 @@ public:
 	AStar();
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Component")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Component")
 	USceneComponent* Root;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Component")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Component")
 	UStaticMeshComponent* StaticMesh;
 	
 	UPROPERTY(EditAnywhere, Category = "Movement")
