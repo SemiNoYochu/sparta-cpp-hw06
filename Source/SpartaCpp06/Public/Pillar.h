@@ -4,16 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Platform.generated.h"
+#include "Pillar.generated.h"
 
 UCLASS()
-class SPARTACPP06_API APlatform : public AActor
+class SPARTACPP06_API APillar : public AActor
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this actor's properties
-	APlatform();
+	APillar();
 
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Component")

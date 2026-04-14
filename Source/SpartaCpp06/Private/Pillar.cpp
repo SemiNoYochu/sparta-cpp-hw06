@@ -1,11 +1,11 @@
 ﻿// Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "SpartaCpp06/Public/Platform.h"
+#include "SpartaCpp06/Public/Pillar.h"
 
 
 // Sets default values
-APlatform::APlatform()
+APillar::APillar()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
@@ -21,25 +21,27 @@ APlatform::APlatform()
 }
 
 // Called when the game starts or when spawned
-void APlatform::BeginPlay()
+void APillar::BeginPlay()
 {
 	Super::BeginPlay();
 	
 	GetWorld()->GetTimerManager().SetTimer(
 		ToggleTimerHandle,
 		this,
-		&APlatform::TogglePlatform,
+		&APillar::TogglePlatform,
 		ToggleInterval,
 		true,
 		StartDelay
 		);
+	
 }
 
-void APlatform::TogglePlatform()
+void APillar::TogglePlatform()
 {
 	bIsActive = !bIsActive;
 	
 	SetActorHiddenInGame(bIsActive);
 	SetActorEnableCollision(bIsActive); 
 }
+
 
